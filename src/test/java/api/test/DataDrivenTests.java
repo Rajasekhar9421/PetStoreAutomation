@@ -28,9 +28,9 @@ public class DataDrivenTests
 	}
 	
 	@Test(priority = 2, dataProvider = "UserName", dataProviderClass =Dataproviders.class )//Here Dataproviders.class
-	public void testDeleteUserByName(String userName)
+	public void testDeleteUserByName(String username)
 	{
-		Response response = UserEndPoints.deleteUser(userName);
+		Response response = UserEndPoints.deleteUser(username);
 		Assert.assertEquals(response.getStatusCode(), 200);
 	}
 
